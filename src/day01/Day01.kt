@@ -1,4 +1,7 @@
+package day01
+
 import org.slf4j.LoggerFactory
+import readInput
 
 fun main() {
     val logger = LoggerFactory.getLogger("Day 01")
@@ -62,14 +65,14 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day01_test")
+    val testInput = readInput("day01/Day01_test")
     check(part1(testInput) == 142)
 
 
-    val testInput2 = readInput("Day01_Part02_test")
+    val testInput2 = readInput("day01/Day01_Part02_test")
     check(part2(testInput2) == 281)
 
-    val input = readInput("Day01")
+    val input = readInput("day01/Day01")
     logger.info("Part 1 solution: ${part1(input)}")
     logger.info("Part 2 solution: ${part2(input)}")
 }
