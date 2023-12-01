@@ -16,13 +16,19 @@ fun main() {
         return 2
     }
 
+    logger.info("Advent of Code - Day $dayZeroPadded")
 
     val testInput1 = readInput("day$dayZeroPadded/Part1_test")
-    check(part1(testInput1) == 1)
-
+    val testInput1Result = part1(testInput1)
+    val testInput1Expected = 1
+    logger.info("Part 1 test result: $testInput1Result")
+    check(testInput1Result == testInput1Expected) { "Expected $testInput1Result to equal $testInput1Expected"}
 
     val testInput2 = readInput("day$dayZeroPadded/Part2_test")
-    check(part2(testInput2) == 2)
+    val testInput2Result = part2(testInput2)
+    val testInput2Expected = 2
+    logger.info("Part 2 test result: $testInput2Result")
+    check(testInput2Result == testInput2Expected) { "Expected $testInput2Result to equal $testInput2Expected"}
 
     val input = readInput("day$dayZeroPadded/Part1")
     logger.info("Part 1 solution: ${part1(input)}")
